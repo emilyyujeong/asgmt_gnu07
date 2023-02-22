@@ -19,23 +19,65 @@ h4,
 h5,
 h6 {
     font-family: 'Roboto', 'Noto Sans KR';
-}
 
-h2 {
-    font-size: 30px;
-    font-weight: 500;
-    margin-bottom: 20px;
-}
-
-p {
-    font-size: 18px;
-    font-weight: 300;
 }
 
 .inner {
     width: 1200px;
     margin: 0 auto;
+    color: #1c1c1b;
 }
+
+/* DEFAULT STYLE CSS - H2 H3 SHOWMORE A TAG ... */
+
+h2 {
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 21px;
+    font-weight: 300;
+    margin-bottom: 30px;
+    word-break: keep-all;
+
+}
+
+.show_more {
+    display: inline-block;
+    font-size: 16px;
+    padding: 10px 20px;
+
+    background: #fdd000;
+    color: #1c1c1b;
+
+}
+
+
+.cont_text_title {
+    font-size: 20px;
+    padding: 20px 0;
+}
+
+.cont_text_info {
+    font-size: 16px;
+    color: #888;
+    padding-bottom: 30px;
+    line-height: 22px;
+}
+
+
+.color {
+    color: #fdd000;
+}
+
+.robo {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* HEADER */
 
 #header {
     position: sticky;
@@ -43,7 +85,7 @@ p {
     left: 0;
 
     z-index: 999;
-    padding: 0 200px;
+    padding: 0 20px;
 
     line-height: 100px;
     background: #fff;
@@ -59,57 +101,46 @@ p {
     font-size: 0;
 }
 
+#header h1 img {
+    width: 40%;
+}
+
 
 #header .gnb>ul {
     display: flex;
-    gap: 40px;
-
 }
 
 #header .gnb>ul>li {
     position: relative;
-
 }
 
 #header .gnb>ul>li>a {
-    font-size: 18px;
+    padding: 0 20px;
+    font-size: 20px;
     font-weight: 500;
-
 }
 
 #header .gnb>ul>li a {
     display: block;
     text-align: center;
-
 }
 
 #header .gnb>ul>li a:hover {
     color: #f00;
 }
 
-#header .link a {
-    padding: 10px 20px;
-    font-size: 20px;
-}
-
-
-#header .link a:hover {
-    background: #f00;
-}
 
 
 #header .gnb>ul>li .submenu {
     position: absolute;
     top: 100px;
     left: 50%;
-    line-height: 35px;
+    line-height: 30px;
 
     font-size: 16px;
     font-weight: 500;
 
     transform: translate(-50%, 0);
-    margin: 20px 0 0 0;
-
     width: 130px;
 
     height: 0;
@@ -123,7 +154,6 @@ p {
 }
 
 
-
 #header .gnb::before {
     content: "";
     position: absolute;
@@ -132,7 +162,6 @@ p {
     right: 0;
     height: 0;
     background: #fff;
-    border-top: 1px solid #ddd;
 
     transition: 0.5s;
 }
@@ -143,63 +172,368 @@ p {
 
 }
 
-#mainVisual .main_slide figure {
-    position: relative;
-    height: 590px;
+#header .link a {
+    font-size: 20px;
 }
 
 
+/* MAIN VISUAL SLIDE*/
+
+#mainVisual .main_slide figure {
+    margin: -50px 0;
+    position: relative;
+    height: 969px;
+}
+
 #mainVisual .main_slide .itm01 {
-    background: url(../img/main_visual01.jpg)no-repeat center center/cover;
+    background: url(../img/mainVisual01.jpg)no-repeat center center/cover;
 }
 
 #mainVisual .main_slide .itm02 {
-    background: url(../img/main_visual02.jpg)no-repeat center center/cover;
+    background: url(../img/mainVisual02.jpg)no-repeat center center/cover;
 }
 
 #mainVisual .main_slide .itm03 {
-    background: url(../img/main_visual03.jpg)no-repeat center center/cover;
+    background: url(../img/mainVisual03.jpg)no-repeat center center/cover;
 }
 
-.main_slide .slick-dots {
+#mainVisual .main_slide .itm04 {
+    background: url(../img/mainVisual04.jpg)no-repeat center center/cover;
+}
+
+#mainVisual .main_slide .itm05 {
+    background: url(../img/mainVisual05.jpg)no-repeat center center/cover;
+}
+
+#mainVisual .main_slide .itm06 {
+    background: url(../img/mainVisual06.jpg)no-repeat center center/cover;
+}
+
+
+#mainVisual .main_slide .slick-dots {
     position: absolute;
-    bottom: 30px;
-    left: 10%;
+    bottom: 10px;
+    left: 50%;
     transform: translate(-50%, 0);
 }
 
-.main_slide .slick-dots>li {
+#mainVisual .main_slide .slick-dots>li {
     display: inline-block;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: #ddd;
-    margin: 10px;
+    width: 50px;
+    height: 4px;
+    background: #ffffff65;
+    margin: 1px;
 }
 
-.main_slide .slick-dots>li.slick-active {
-    background: #333;
+#mainVisual .main_slide .slick-dots>li.slick-active {
+    background: #fff;
+    width: 100px;
 }
 
-.main_slide .slick-dots>li button {
+#mainVisual .main_slide .slick-dots>li button {
     display: none;
 }
 
-#mainCompany_intro {
+/* MAIN VISUAL SLIDE SCROLL DOWN MOUSE*/
+
+.scroll_down_icon {
+    color: #fff;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: scroll_down_icon_move 1.5s linear infinite;
+    cursor: pointer;
+    text-align: center;
+}
+
+.scroll_down_icon_mouse {
+    margin: 0 auto;
+    display: block;
+    border-radius: 50px;
+    border: 2px solid #fff;
+    height: 50px;
+    width: 25px;
+    position: relative;
+
+}
+
+.scroll_down_icon_mosue_move {
+    position: absolute;
+    background-color: #fff;
+    height: 8px;
+    width: 4px;
+    border-radius: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scroll_down_icon_mouse_move 2s linear infinite;
+}
+
+.scroll_down_text {
+    margin-top: 10px;
+}
+
+@keyframes scroll_down_icon_move {
+    0% {
+        bottom: 10px;
+        opacity: 1;
+    }
+
+    50% {
+        bottom: 0;
+        opacity: 0.2;
+    }
+
+    100% {
+        bottom: 10px;
+        opacity: 1;
+    }
+}
+
+@keyframes scroll_down_icon_mouse_move {
+    0% {
+        transform: translate(-50%, 5px);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translate(-50%, 15px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-50%, 30px);
+        opacity: 0;
+    }
+}
+
+
+
+/*NEW MENU SLIDE */
+
+
+#newMenu {
+    position: relative;
     padding: 100px 0;
     text-align: center;
+}
+
+#newMenu .pro_slide {
+    margin: 0 -15px 20px -15px;
+}
+
+#newMenu .pro_slide figure {
+    border: 1px solid #ddd;
+    margin: 40px 15px;
+    text-align: center;
+    border-radius: 5px;
+    overflow: hidden;
 
 }
 
-#mainCompany_intro .company_intro {
+
+#newMenu .arrows i {
+    position: absolute;
+    left: 85%;
+    top: 58%;
+
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    padding: 15px;
+    color: #333;
+}
+
+
+#newMenu .arrows i:first-child {
+    margin: 0 0 0 -1330px;
+}
+
+#newMenu .arrows i:last-child {
+    margin: 0 0 0 0;
+}
+
+
+/* FRANCHISE VIDEO */
+
+#franchise {
+    position: relative;
+    padding: 100px 0;
+    text-align: center;
+    background: #fdd000;
+}
+
+
+/* EVENT */
+
+#event {
+    position: relative;
+    padding: 100px 0;
+    text-align: center;
+}
+
+#event .event_box {
+    margin: 40px 0;
+    display: flex;
+    gap: 30px;
+
+}
+
+#event .event_box figure {
+
+    border: 1px solid #ddd;
+}
+
+/* FOOTER FOOTER FOOTER */
+
+
+.f_inner {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#footer {
+    width: 100vw;
+    padding: 50px 0 30px 0;
+    background: #111;
+    color: #555;
+}
+
+#footer .top {
     display: flex;
     justify-content: space-between;
-
-    padding: 50px 0;
+    padding-bottom: 30px;
 }
 
-#mainCompany_intro .company_intro figure {
-    width: 300px;
-    height: 500px;
+#footer .top img {
+    width: 15%;
+}
+
+#footer .top ul>li {
+    display: inline-block;
+    padding: 0 0 0 10px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#footer .top ul>li~li::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    background: #555;
+    margin: 0 10px 0 0;
+}
+
+#footer .bottom {
+    border-top: 1px solid rgba(143, 143, 143, 0.596);
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+
+#footer .bottom h3 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffffffb2;
+    padding-bottom: 20px;
+}
+
+#footer .bottom ul>li~li::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    background: #555;
+    margin: 0 10px 0 0;
+}
+
+.copy {
+    padding-top: 10px;
+    font-size: 14px;
+}
+
+#f_link {
     border: 1px solid #ddd;
+    outline: none;
+    padding: 5px 10px;
+    background: #111;
+    border: 1px solid #ddd;
+}
+
+#f_link option {
+    padding: 5px 20px;
+}
+
+#footer .bottom li {
+    display: inline-block;
+    padding: 0 15px 0 0;
+    font-size: 14px;
+}
+
+/* SUB 01 - MEGE STORY - BRAND INFORMATION */
+
+.sub_info {
+    padding: 100px 0;
+}
+
+.sub_info .sub_intro {
+    display: flex;
+    gap: 50px;
+
+}
+
+.sub_info .sub_intro .left {
+    line-height: 70px;
+}
+
+/*애매...*/
+
+.sub_info .sub_intro .left h2 {
+    padding-bottom: 30px;
+}
+
+.sub_info .sub_intro .left h3 {
+    font-size: 40px;
+    font-weight: 700;
+    padding-bottom: 30px;
+}
+
+.sub_info .sub_intro .left span {
+    display: block;
+    font-size: 22px;
+    padding-bottom: 30px;
+
+}
+
+
+.sub_info .sub_feature {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.sub_info .sub_feature .intro_box {
+    display: flex;
+    gap: 30px;
+}
+
+.sub_info .sub_feature .intro_box figure {
+    width: 300px;
+    height: 200px;
+    border: 1px solid #ddd;
+}
+
+.sub_info .sub_feature .intro_box .cont_text_info {
+    max-width: 250px;
+    margin: 0 auto;
+
+
+}
+
+
+
+.sub_menu_box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
 }
